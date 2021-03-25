@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="menu.css" />
+    <link rel="stylesheet" type="text/css" href="./dist/wu-icons-style.css" />
+    <script type="module" src="app.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico" />
+  </head>
+  <body>
+    
+    <div class="container">
+      <p id="notification"></p>
+      <div class="curr-info">
+        <div class="loc-info">
+          <p id="curr-loc">--</p>
+          <div class="time-container">
+            <p id="curr-dayDate">--</p>
+            <p id="curr-time">--</p>
+          </div> <!-- .time-container -->
+        </div> <!-- .loc-info -->
+          <div class="mid">
+            <div class="curr-container">
+              <p id="curr-temp">--</p>
+              <!--<p id="curr-icon">Icon</p>-->
+              <i style="width: 100px; height: 100px;" id="curr-icon"></i>
+              <p id="curr-temp-desc">--</p>
+              <p id="curr-feelsLike"></p>
+            </div> <!-- .curr-container -->
+          </div> <!-- .mid -->
+      </div> <!-- .curr-info -->
+
+      <div class="weather-info">
+        <h2>Hourly</h2>
+        <div class="hourly-container">
+          <div id="hr-1">
+            <p id="hrly-time-1">Time</p>
+            <i id="hrly-ico-1">Hourly Icon</i>
+            <p id="hrly-temp-1">--</p>
+            <p id="hourly-feelsLike-1"></p>
+            <p id="hourly-feelsLike-desc-1"></p>
+          </div>
+          <div id="hr-2">
+            <p id="hrly-time-2">Time</p>
+            <i id="hrly-ico-2">Hourly Icon</i>
+            <p id="hrly-temp-2">--</p>
+            <p id="hourly-feelsLike-2"></p>
+            <p id="hourly-feelsLike-desc-2"></p>
+          </div>
+          <div id="hr-3">
+            <p id="hrly-time-3">Time</p>
+            <i id="hrly-ico-3">Hourly Icon</i>
+            <p id="hrly-temp-3">--</p>
+            <p id="hourly-feelsLike-3"></p>
+            <p id="hourly-feelsLike-desc-3"></p>
+          </div>
+          <div id="hr-4">
+            <p id="hrly-time-4">Time</p>
+            <i id="hrly-ico-4">Hourly Icon</i>
+            <p id="hrly-temp-4">--</p>
+            <p id="hourly-feelsLike-4"></p>
+            <p id="hourly-feelsLike-desc-4"></p>
+          </div>
+          <div id="hr-5">
+            <p id="hrly-time-5">Time</p>
+            <i id="hrly-ico-5">Hourly Icon</i>
+            <p id="hrly-temp-5">--</p>
+            <p id="hourly-feelsLike-5"></p>
+            <p id="hourly-feelsLike-desc-5"></p>
+          </div>
+          <div id="hr-6">
+            <p id="hrly-time-6">Time</p>
+            <i id="hrly-ico-6">Hourly Icon</i>
+            <p id="hrly-temp-6">--</p>
+            <p id="hourly-feelsLike-6"></p>
+            <p id="hourly-feelsLike-desc-6"></p>
+          </div>
+          <div id="hr-7">
+            <p id="hrly-time-7">Time</p>
+            <i id="hrly-ico-7">Hourly Icon</i>
+            <p id="hrly-temp-7">--</p>
+            <p id="hourly-feelsLike-7"></p>
+            <p id="hourly-feelsLike-desc-7"></p>
+          </div>
+          <div id="hr-8">
+            <p id="hrly-time-8">Time</p>
+            <i id="hrly-ico-8">Hourly Icon</i>
+            <p id="hrly-temp-8">--</p>
+            <p id="hourly-feelsLike-8"></p>
+            <p id="hourly-feelsLike-desc-8"></p>
+          </div>
+        </div>
+
+        <h2>Daily</h2>
+        <div class="fore-day-container">
+          <div class="forecast-info" id="fr-1">
+            <p id="fore-day-1">Fore-Day</p>
+            <i id="fore-ico-1">Fore-Icon</i>
+            <p id="fore-min-1">Fore-Min</p>
+            <p id="fore-max-1">Fore-Max</p>
+            <p id="forecast-FeelsLike-1"></p>
+            <p id="forecast-feelsLike-desc-1"></p>
+
+          </div>
+          <div class="forecast-info" id="fr-2">
+            <p id="fore-day-2">Fore-Day</p>
+            <i id="fore-ico-2">Fore-Icon</i>
+            <p id="fore-min-2">Fore-Min</p>
+            <p id="fore-max-2">Fore-Max</p>
+            <p id="forecast-FeelsLike-2"></p>
+            <p id="forecast-feelsLike-desc-2"></p>
+          </div>
+          <div class="forecast-info" id="fr-3">
+            <p id="fore-day-3">Fore-Day</p>
+            <i id="fore-ico-3">Fore-Icon</i>
+            <p id="fore-min-3">Fore-Min</p>
+            <p id="fore-max-3">Fore-Max</p>
+            <p id="forecast-FeelsLike-3"></p>
+            <p id="forecast-feelsLike-desc-3"></p>
+          </div>
+          <div class="forecast-info" id="fr-4">
+            <p id="fore-day-4">Fore-Day</p>
+            <i id="fore-ico-4">Fore-Icon</i>
+            <p id="fore-min-4">Fore-Min</p>
+            <p id="fore-max-4">Fore-Max</p>
+            <p id="forecast-FeelsLike-4"></p>
+            <p id="forecast-feelsLike-desc-4"></p>
+          </div>
+          <div class="forecast-info" id="fr-5">
+            <p id="fore-day-5">Fore-Day</p>
+            <i id="fore-ico-5">Fore-Icon</i>
+            <p id="fore-min-5">Fore-Min</p>
+            <p id="fore-max-5">Fore-Max</p>
+            <p id="forecast-FeelsLike-5"></p>
+            <p id="forecast-feelsLike-desc-5"></p>
+          </div>
+          <div class="forecast-info" id="fr-6">
+            <p id="fore-day-6">Fore-Day</p>
+            <i id="fore-ico-6">Fore-Icon</i>
+            <p id="fore-min-6">Fore-Min</p>
+            <p id="fore-max-6">Fore-Max</p>
+            <p id="forecast-FeelsLike-6"></p>
+            <p id="forecast-feelsLike-desc-6"></p>
+          </div>
+          <div class="forecast-info" id="fr-7">
+            <p id="fore-day-7">Fore-Day</p>
+            <i id="fore-ico-7">Fore-Icon</i>
+            <p id="fore-min-7">Fore-Min</p>
+            <p id="fore-max-7">Fore-Max</p>
+            <p id="forecast-FeelsLike-7"></p>
+            <p id="forecast-feelsLike-desc-7"></p>
+          </div>
+        </div>
+
+        <h2>Day Details</h2>
+        <div class="stats-container">
+          <div class="statInf">
+            <div class="stat">SUNRISE</div>
+            <p class="stat-1" id="sunRS">--</p>
+          </div>
+
+          <div class="statInf">
+            <div class="stat">SUNSET</div>
+            <p class="stat-1" id="sunST">--</p>
+          </div>
+
+          <div class="statInf">
+            <div class="stat">HUMIDITY</div>
+            <p class="stat-1" id="hmd">--</p>
+          </div>
+
+          <div class="statInf">
+            <div class="stat">WIND SPEED</div>
+            <p class="stat-1" id="wnd">--</p>
+          </div>
+
+          <div class="statInf">
+            <div class="stat">AIR PRESSURE</div>
+            <p class="stat-1" id="pres">--</p>
+          </div>
+
+          <div class="statInf">
+            <div class="stat">UV INDEX</div>
+            <p class="stat-1" id="ind">--</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggler" />
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+          <div>
+            <div>
+              <ul>
+                <li><p id="Celsius" style="cursor: pointer;">Celsius</p></li>
+                <li><p id="Fahrenheit" style="cursor: pointer;">Fahrenheit</p></li>
+                <li><p id="12-Hour" style="cursor: pointer;">12-Hour</p></li>
+                <li><p id="24-Hour"style="cursor: pointer;">24-Hour</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
